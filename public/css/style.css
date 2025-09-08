@@ -1,9 +1,101 @@
 * {
   margin: 0%;
+  padding: 0%;
 }
 
-.photo_entete {
-  width: auto;
+header {
+  display: flex;
+}
+header .photo_entete {
+  width: 100%;
+}
+
+.nav {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #2E7D32;
+  list-style: none;
+  gap: 0.7rem;
+}
+.nav li {
+  display: flex;
+  justify-content: center;
+}
+.nav .nav_button {
+  width: 100%;
+  background-color: #FF9800;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #50362b;
+  border: none;
+  font-size: 1.1rem;
+}
+.nav .nav_button:hover {
+  background-color: #F4E1C1;
+}
+
+.page {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F4E1C1;
+  gap: 20px;
+  color: #50362b;
+}
+.page h1 {
+  width: 50%;
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+.page p {
+  width: 70%;
+  font-size: 1rem;
+}
+.page .reservation_button {
+  text-align: center;
+  width: 50%;
+  background-color: #FF9800;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #50362b;
+  border: none;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.parent_card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0px;
+}
+.parent_card .card {
+  width: 80%;
+  background-color: #F4E1C1;
+  padding: 30px 20px;
+  border-radius: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #50362b;
+}
+
+footer {
+  color: #50362b;
+  background-color: #2E7D32;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+footer p {
+  padding: 30px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
