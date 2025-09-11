@@ -3,17 +3,17 @@ import { Repository } from "../libs/Repository";
 export class ParkRepository extends Repository {
     findAll = async () => {
         const query = {
-            name: "fetch-all-book",
+            name: "fetch-all-park",
             text: `SELECT * FROM park`,
         };
 
         try {
             const result = await this.pool.query(query);
 
-            const park = result.rows.map((row) => {
+            const parks = result.rows.map((row) => {
                 console.log(row)
             })
-            return park;
+            return parks;
         } catch (error) {
             console.log(error);
         }
