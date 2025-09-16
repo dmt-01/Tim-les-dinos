@@ -1,0 +1,22 @@
+<%- include("../partials/head", { title: "Admin" }) %>
+    <%- include("../partials/header") %>
+        <%- include("../partials/nav") %>
+            <main>
+                <section class="contact" id="contact">
+                    <h3 class="contact_title">Connexion Administeur</h3>
+                    <form class="contact_form" id="reservationForm">
+                        <div class="form_group">
+                            <label class="form_group_label" for="nom">Email</label>
+                            <input class="form_group_input" type="text" id="nom" name="nom" required>
+                        </div>
+
+                        <div class="form_group">
+                            <label class="form_group_label" for="email">Mot de passe</label>
+                            <input class="form_group_input" type="email" id="email" name="email" required>
+                        </div>
+                        <button type="submit" class="contact-form_submit">Connexion</button>
+                    </form>
+                </section>
+            </main>
+
+            <%- include("../partials/footer") %>

@@ -1,7 +1,9 @@
 import { Repository } from "../libs/Repository";
 
 export class DinosaurRepository extends Repository {
-    findAll = async () => {
+
+
+    async findAll() {
         const query = {
             name: "fetch-all-dinosaur",
             text: `SELECT * FROM dinosaur`,
@@ -10,9 +12,8 @@ export class DinosaurRepository extends Repository {
         try {
             const result = await this.pool.query(query);
 
-            const dinosaurs = result.rows.map((row) => {
-                console.log(row)
-            })
+            const dinosaurs = result.rows.map((row) => {})
+            
             return dinosaurs;
         } catch (error) {
             console.log(error);

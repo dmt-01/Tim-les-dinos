@@ -1,12 +1,12 @@
 import { Controller } from "../libs/Controller";
 import { Request, Response } from "express";
 
-export class TicketClientController extends Controller {
+export class LogAdminController extends Controller {
   constructor(request: Request, response: Response) {
     super(request, response);
   }
 
-  public formTicket() {
-    this.response.render("pages/formClient", {});
+  public FormLogAdmin() {
+    this.response.render("pages/logAdmin", {});
   }
 }
