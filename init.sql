@@ -20,7 +20,8 @@ CREATE TABLE dinosaur(
    name VARCHAR(50),
    id_park INTEGER NOT NULL,
    PRIMARY KEY(id_dinosaur),
-   FOREIGN KEY(id_park) REFERENCES park(id_park)
+   FOREIGN KEY(id_park) REFERENCES park(id_park),
+   description text
 );
 
 CREATE TABLE ticket(
@@ -66,14 +67,15 @@ VALUES
    ('ian.malcolm@jurassic.com', 'chaosTheory', 3);
 
 INSERT INTO
-   dinosaur (breed, name, id_park)
+   dinosaur (breed, name, id_park, description)
 VALUES
-   ('Tyrannosaurus Rex', 'Rexy', 1),
-   ('Velociraptor', 'Blue', 1),
-   ('Brachiosaurus', 'Longneck', 1),
-   ('Spinosaurus', 'Spiny', 2),
-   ('Stegosaurus', 'Spike', 2),
-   ('Pteranodon', 'Skywing', 3);
+   ('Tyrannosaurus Rex', 'Rexy', 1, 'Un grand carnivore redouté, emblématique du parc.'),
+   ('Velociraptor', 'Blue', 1, 'Rapide, intelligent et très rusé.'),
+   ('Brachiosaurus', 'Longneck', 1, 'Un herbivore géant au long cou.'),
+   ('Spinosaurus', 'Spiny', 2, 'Un prédateur aquatique puissant avec une voile dorsale.'),
+   ('Stegosaurus', 'Spike', 2, 'Herbivore avec plaques dorsales et queue épineuse.'),
+   ('Pteranodon', 'Skywing', 3, 'Un reptile volant majestueux.');
+
 
 INSERT INTO
    ticket (dates, type, id_park)

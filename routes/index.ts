@@ -9,6 +9,6 @@ const router = Router();
 router.use(globalRouter);
 router.use("/ticket", ticketRouter);
 router.use("/logAdmin", logAdminRouter);
-router.use("/dinausor", dinosaurRouter);
+router.use("/dinosaur", dinosaurRouter);
 
 export default router;
