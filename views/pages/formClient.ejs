@@ -1,0 +1,50 @@
+<%- include("../partials/head", { title: "Ticket" }) %>
+    <%- include("../partials/header") %>
+        <%- include("../partials/nav") %>
+            <main>
+                <section class="contact" id="contact">
+                    <h3 class="contact_title">Réservez Votre Visite</h3>
+                    <form class="contact_form" id="reservationForm">
+                        <div class="form_group">
+                            <label class="form_group_label" for="nom">Nom complet</label>
+                            <input class="form_group_input" type="text" id="nom" name="nom" required>
+                        </div>
+
+                        <div class="form_group">
+                            <label class="form_group_label" for="email">Email</label>
+                            <input class="form_group_input" type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form_group">
+                            <label class="form_group_label" for="telephone">Téléphone</label>
+                            <input class="form_group_input" type="tel" id="telephone" name="telephone">
+                        </div>
+
+                        <div class="form_group">
+                            <label class="form_group_label" for="date">Date souhaitée</label>
+                            <input class="form_group_input" type="date" id="date" name="date" required>
+                        </div>
+
+                        <div class="form_group">
+                            <label class="form_group_label" for="visiteurs">Nombre de visiteurs</label>
+                            <select class="form_group_select" id="visiteurs" name="visiteurs">
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3-4">3-4 personnes</option>
+                                <option value="5+">5+ personnes</option>
+                                <option value="groupe">Groupe (10+)</option>
+                            </select>
+                        </div>
+
+                        <div class="form_group">
+                            <label class="form_group_label" for="message">Message (optionnel)</label>
+                            <textarea class="form_group_textarea" id="message" name="message" rows="4"
+                                placeholder="Questions particulières, besoins spéciaux...">
+                            </textarea>
+                        </div>
+
+                        <button type="submit" class="contact-form_submit">Envoyer la Réservation</button>
+                    </form>
+                </section>
+            </main>
+            <%- include("../partials/footer") %>

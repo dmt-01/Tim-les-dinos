@@ -7,4 +7,6 @@ export abstract class Repository {
   constructor() {
     this.pool = Database.getPool();
   }
+
+  
 }
