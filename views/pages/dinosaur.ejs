@@ -3,12 +3,16 @@
         <%- include("../partials/nav") %>
 
             <div class="parent_card">
-                <% Dinosaurs.forEach((Dinosaur) => { %>
-                <div class="card">
-                    <h2><%= Dinosaur.getName() %></h2>
-                    <p><%= Dinosaur.getDescription() %></p>
-                </div>
-                <% }) %>
+                <% Dinosaurs.forEach((Dinosaur)=> { %>
+                    <div class="card">
+                        <h2><a href="/dinosaur/<%= Dinosaur.getId() %>">
+                                <%= Dinosaur.getName() %>
+                            </a></h2>
+                        <p>
+                            <%= Dinosaur.getDescription() %>
+                        </p>
+                    </div>
+                    <% }) %>
             </div>
 
             <%- include("../partials/footer") %>

@@ -50,6 +50,11 @@ header {
         font-size: 1.1rem;
     }
 
+    a {
+        text-decoration: none;
+        color: $brown;
+    }
+
     .nav_button:hover {
         background-color: #F4E1C1;
     }
@@ -105,6 +110,11 @@ header {
         display: flex;
         flex-direction: column;
         text-align: center;
+        color: $brown;
+    }
+
+    a {
+        text-decoration: none;
         color: $brown;
     }
 

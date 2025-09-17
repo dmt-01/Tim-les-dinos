@@ -17,7 +17,19 @@ export class DinosaurController extends Controller {
     this.response.render("pages/dinosaur", {Dinosaurs});
   }
 
-  public detailDinosaur() {
-    this.response.render("pages/detailDinosaur",{})
+  public async detailDinosaur() {
+  const requestDinosaurId = parseInt(this.request.params.id, 10);
+
+  if (isNaN(requestDinosaurId)) {
+    return this.response.status(400).send("ID invalide");
   }
+
+  const dinosaur = await this.DinosaurRepository.findById(requestDinosaurId);
+
+  if (!dinosaur) {
+    return this.response.status(404).send("Dinosaure introuvable");
+  }
+
+  this.response.render("pages/detailDinosaur", { dinosaur });
+}
 }
