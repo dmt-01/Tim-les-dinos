@@ -1,22 +1,17 @@
 export interface ReserveTypeRow {
-  id_ticket: number | null;
+  id_ticket: number;
   dates: Date;
   type: string;
-  id_park: number | null;
+  id_park: number;
 }
 
 export class Reserve {
-  protected id_ticket: number | null;
+  protected id_ticket: number;
   protected dates: Date;
   protected type: string;
-  protected id_park: number | null;
+  protected id_park: number;
 
-  constructor(
-    id_ticket: number | null,
-    dates: Date,
-    type: string,
-    id_park: number | null
-  ) {
+  constructor(id_ticket: number, dates: Date, type: string, id_park: number) {
     this.id_ticket = id_ticket;
     this.dates = dates;
     this.type = type;

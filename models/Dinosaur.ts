@@ -44,5 +44,4 @@ export class Dinosaur {
   getDescription(){
     return this.description;
   }
-
 }
