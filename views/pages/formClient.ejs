@@ -6,17 +6,17 @@
                     <h3 class="contact_title">Réservez Votre Visite</h3>
                     <form class="contact_form" id="reservationForm">
                         <div class="form_group">
-                            <label class="form_group_label" for="nom">Nom complet</label>
+                            <label class="form_group_label" for="nom">Prénom</label>
                             <input class="form_group_input" type="text" id="nom" name="nom" required>
                         </div>
 
                         <div class="form_group">
-                            <label class="form_group_label" for="email">Email</label>
+                            <label class="form_group_label" for="email">Nom de famille</label>
                             <input class="form_group_input" type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form_group">
-                            <label class="form_group_label" for="telephone">Téléphone</label>
+                            <label class="form_group_label" for="telephone">Email</label>
                             <input class="form_group_input" type="tel" id="telephone" name="telephone">
                         </div>
 
@@ -35,14 +35,14 @@
                                 <option value="groupe">Groupe (10+)</option>
                             </select>
                         </div>
-
                         <div class="form_group">
-                            <label class="form_group_label" for="message">Message (optionnel)</label>
-                            <textarea class="form_group_textarea" id="message" name="message" rows="4"
-                                placeholder="Questions particulières, besoins spéciaux...">
-                            </textarea>
+                            <label class="form_group_label" for="visiteurs">Type de billet</label>
+                            <select class="form_group_select" id="visiteurs" name="visiteurs">
+                                <option value="Standard">Standard</option>
+                                <option value="Family">Family</option>
+                                <option value="VIP">V.I.P</option>
+                            </select>
                         </div>
-
                         <button type="submit" class="contact-form_submit">Envoyer la Réservation</button>
                     </form>
                 </section>

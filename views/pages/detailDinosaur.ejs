@@ -1,0 +1,20 @@
+<%- include("../partials/head", { title: "All Dinosaur" }) %>
+    <%- include("../partials/header") %>
+        <%- include("../partials/nav") %>
+
+            <div class="parent_card">
+                <div class="card">
+                    <img src="/public/timEtLesDinos.png" alt="images">
+                    <h2>
+                        <%= dinosaur.getName() %>
+                    </h2>
+                    <p>
+                        Le Repas de <%= dinosaur.getName() %> est un autre dinosaure de la race <%= dinosaur.getBreed() %>.
+                    </p>
+                    <p>
+                        <%= dinosaur.getDescription() %>
+                    </p>
+                </div>
+            </div>
+
+            <%- include("../partials/footer") %>

@@ -1,23 +1,23 @@
 export interface ParkTypeRow {
-  id: number | null;
+  id_park: number;
   location: string;
 }
 
 export class Park {
-  protected id: number | null;
+  protected id_park: number;
   protected location: string;
 
-  constructor(id: number | null, location: string) {
-    this.id = id;
+  constructor(id_park: number, location: string) {
+    this.id_park = id_park;
     this.location = location;
   }
 
   static fromRow(row: ParkTypeRow): Park {
-    return new Park(row.id, row.location);
+    return new Park(row.id_park, row.location);
   }
 
   getId() {
-    return this.id;
+    return this.id_park;
   }
 
   getLocation() {

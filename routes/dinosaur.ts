@@ -3,7 +3,7 @@ import { DinosaurController } from "../controller/DinosaurController";
 
 const dinosaurRouter = Router();
 
-dinosaurRouter.get("/", (request, response) => {
+dinosaurRouter.get("", (request, response) => {
   const controller = new DinosaurController(request, response);
   controller.allDinosaur();
 });

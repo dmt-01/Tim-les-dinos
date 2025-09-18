@@ -1,5 +1,3 @@
-import { th } from "zod/v4/locales/index.cjs";
-
 export interface UsersTypeRow {
   id_user: number;
   email: string;
