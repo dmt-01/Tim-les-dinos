@@ -5,7 +5,7 @@ export interface ReserveTypeRow {
   id_park: number;
 }
 
-export class Reserve {
+export class Ticket {
   protected id_ticket: number;
   protected dates: Date;
   protected type: string;
@@ -18,8 +18,8 @@ export class Reserve {
     this.id_park = id_park;
   }
 
-  static fromRow(row: ReserveTypeRow): Reserve {
-    return new Reserve(row.id_ticket, row.dates, row.type, row.id_park);
+  static fromRow(row: ReserveTypeRow): Ticket {
+    return new Ticket(row.id_ticket, row.dates, row.type, row.id_park);
   }
 
   getIdTicket() {

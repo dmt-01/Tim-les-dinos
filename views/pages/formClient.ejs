@@ -4,20 +4,20 @@
             <main>
                 <section class="contact" id="contact">
                     <h3 class="contact_title">Réservez Votre Visite</h3>
-                    <form class="contact_form" id="reservationForm">
+                    <form action="/ticket" method="POST" class="contact_form" id="reservationForm">
                         <div class="form_group">
-                            <label class="form_group_label" for="nom">Prénom</label>
-                            <input class="form_group_input" type="text" id="nom" name="nom" required>
+                            <label class="form_group_label" for="first_name">Prénom</label>
+                            <input class="form_group_input" type="text" id="first_name" name="first_name" required>
                         </div>
 
                         <div class="form_group">
-                            <label class="form_group_label" for="email">Nom de famille</label>
-                            <input class="form_group_input" type="email" id="email" name="email" required>
+                            <label class="form_group_label" for="last_name">Nom de famille</label>
+                            <input class="form_group_input" type="text" id="last_name" name="last_name" required>
                         </div>
 
                         <div class="form_group">
-                            <label class="form_group_label" for="telephone">Email</label>
-                            <input class="form_group_input" type="tel" id="telephone" name="telephone">
+                            <label class="form_group_label" for="email">Email</label>
+                            <input class="form_group_input" type="email" id="email" name="email">
                         </div>
 
                         <div class="form_group">
@@ -26,23 +26,20 @@
                         </div>
 
                         <div class="form_group">
-                            <label class="form_group_label" for="visiteurs">Nombre de visiteurs</label>
-                            <select class="form_group_select" id="visiteurs" name="visiteurs">
-                                <option value="1">1 personne</option>
-                                <option value="2">2 personnes</option>
-                                <option value="3-4">3-4 personnes</option>
-                                <option value="5+">5+ personnes</option>
-                                <option value="groupe">Groupe (10+)</option>
-                            </select>
+                            <label class="form_group_label" for="quantity">Nombre de visiteurs</label>
+                            <input class="form_group_input" type="number" id="quantity" name="quantity" min="1"
+                                required />
                         </div>
+
                         <div class="form_group">
-                            <label class="form_group_label" for="visiteurs">Type de billet</label>
-                            <select class="form_group_select" id="visiteurs" name="visiteurs">
+                            <label class="form_group_label" for="type">Type de billet</label>
+                            <select class="form_group_select" id="type" name="type">
                                 <option value="Standard">Standard</option>
                                 <option value="Family">Family</option>
                                 <option value="VIP">V.I.P</option>
                             </select>
                         </div>
+
                         <button type="submit" class="contact-form_submit">Envoyer la Réservation</button>
                     </form>
                 </section>
