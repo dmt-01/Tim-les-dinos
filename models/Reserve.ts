@@ -27,19 +27,19 @@ export class Reserve {
     return new Reserve(row.id_ticket, row.id_visitor, row.dates, row.quantity);
   }
 
-  getId() {
+  getIdTicket() {
     return this.id_ticket;
   }
 
-  getIdPark() {
+  getIdVisitor() {
     return this.id_visitor;
   }
 
-  getName() {
+  getDates() {
     return this.dates;
   }
 
-  getDescription() {
+  getQuantity() {
     return this.quantity;
   }
 }
