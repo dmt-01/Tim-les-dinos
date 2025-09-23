@@ -30,7 +30,7 @@ export class TicketRepository extends Repository {
       VALUES ($1, $2, $3)
       RETURNING id_ticket, dates
       `,
-      values: [ticket.getDates(), ticket.getType(), ticket.getIdPark],
+      values: [ticket.getDates(), ticket.getType(), ticket.getIdPark()],
     };
     try {
       const resultTicketQuery = await this.pool.query(ticketQuery);
@@ -46,7 +46,11 @@ export class TicketRepository extends Repository {
     VALUES ($1, $2, $3)
     RETURNING id_visitor
     `,
-        values: [visitor.getFirstName(), visitor.getLastName, visitor.getYears],
+        values: [
+          visitor.getFirstName(),
+          visitor.getLastName(),
+          visitor.getYears(),
+        ],
       };
 
       const resultVisitorQuery = await this.pool.query(visitorQuery);
@@ -67,9 +71,8 @@ export class TicketRepository extends Repository {
 
       return ticket;
     } catch (error) {
-      console.log(error);
+      console.error("Erreur createTicket:", error);
+      throw error;
     }
-
-    return null;
   };
 }

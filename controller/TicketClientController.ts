@@ -2,6 +2,7 @@ import { Controller } from "../libs/Controller";
 import { Request, Response } from "express";
 import { TicketRepository } from "../repositories/ticketRepository";
 import { TicketClient } from "../models/views/ReadTicketClient";
+import { log } from "node:console";
 
 export class TicketClientController extends Controller {
   constructor(request: Request, response: Response) {
@@ -34,7 +35,12 @@ export class TicketClientController extends Controller {
         1,
         Number(quantity),
       );
-      await repo.createTicket(ticketClient)
+
+      console.log("avant");
+      
+      await repo.createTicket(ticketClient);
+
+      console.log("apres");
 
 
       this.response.redirect("/confirmation");
